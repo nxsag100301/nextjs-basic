@@ -1,0 +1,32 @@
+/* Đảm bảo toàn bộ trang chiếm 100% chiều cao màn hình */
+html,
+body {
+    height : 100%;
+    margin : 0;
+    padding: 0;
+}
+
+/* Container chính sẽ chiếm toàn bộ chiều cao còn lại */
+.container-main {
+    display       : flex;
+    flex-direction: column;
+    min-height    : 100vh;
+}
+
+/* Nội dung chính sẽ chiếm toàn bộ chiều cao còn lại của trang */
+.container-content {
+    flex: 1;
+}
+
+/* Đặt footer dính xuống đáy trang */
+.container-footer {
+    flex-shrink: 0;
+
+    .footer {
+        height          : 40px;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        background-color: #ccc;
+    }
+}
